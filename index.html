@@ -13,81 +13,39 @@
 <body>
   <div class="container">
 
-    <div class="accordion">
-      <div class="title">
-        <h3>someting</h3>
-      </div>
-
-      <div class="panel">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-      </div>
-
-    </div>
-
-    <div class="accordion">
-      <div class="title">
-        <h3>someting</h3>
-      </div>
-
-      <div class="panel">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-      </div>
-
-    </div>
-
-    <div class="accordion">
-      <div class="title">
-        <h3>someting</h3>
-      </div>
-
-      <div class="panel">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
-          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
-          natus neque.</p>
-      </div>
-
+    <button class="accordion">Website Design and Development</button>
+    <div class="accordion-content">
+      <p>
+        Whether you need a wordpress website, a shopify site, or a custom fullstack application, we got you! No matter
+        what kind of website or application you need, it will be made with clean and maintable code that follows modern
+        development standards. We also have top notch designers that can make unique designs that will make your website
+        look different and unique. Not to mention that we also provide 24/7 website maintenance so that you get all the
+        support you need.
+      </p>
     </div>
 
   </div>
   <!-- <script src="./js/main.js"></script> -->
   <script>
-    let accordion = document.querySelectorAll('.accordion');
+    const accordionBtns = document.querySelectorAll(".accordion");
 
-    accordion.forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('active');
+    accordionBtns.forEach((accordion) => {
+      accordion.onclick = function () {
+        this.classList.toggle("active");
 
+        let content = this.nextElementSibling;
+        console.log(content);
 
-
-        if (item.style.height) {
-          item.style.maxHeight = null;
+        if (content.style.maxHeight) {
+          //this is if the accordion is open
+          content.style.maxHeight = null;
         } else {
-          item.style.maxHeight = item.scrollHeight + "px";
+          //if the accordion is currently closed
+          content.style.maxHeight = content.scrollHeight + "px";
+          console.log(content.style.maxHeight);
         }
-      })
-    })
+      };
+    });
   </script>
 </body>
 

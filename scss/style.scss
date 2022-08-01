@@ -25,46 +25,39 @@ body {
 	flex-wrap: wrap;
 }
 
-// .accordions {
-// 	max-width: 1000px;
-// 	padding: 20px;
-// 	background-color: rgba(255,255,255,0.1);
-// 	backdrop-filter: blur(10px);
-// 	border-radius: 8px;
-// 	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.5);
-// }
-
-.title {
-  background-color: #eee;
-  color: #444;
+button.accordion {
+  width: 100%;
+  background-color: rgba(255,255,255,0.5);
+	backdrop-filter: blur(4px);
+  text-align: left;
   padding: 1rem;
-  max-width: 1000px;
-  font-size: 15px;
-  transition: 0.4s;
+  font-size: 18px;
+  color: #333;
   cursor: pointer;
+  transition: background-color 0.2s linear;
 }
-// .active, .accordion:hover {
-//   background-color: #ccc;
-// }
-.accordion h3:after {
+button.accordion:after {
   content: '\002B';
-  color: #777;
-  font-weight: bold;
-  margin-left: 5px;
-	float: right;
+  font-size: 18px;
+  float: right;
 }
-.active h3:after {
+button.accordion.active:after {
   content: "\2212";
 }
-.panel {
+button.accordion:hover,
+button.accordion.active {
+  background-color: #ddd;
+}
+.accordion-content {
   background-color: white;
   max-height: 0;
   overflow: hidden;
-	max-width: 1000px;
+  transition: max-height 0.2s ease-in-out;
+	padding: 0 20px;
 }
-.accordion.active .panel {
+// toggle
+.accordion.active ~ .accordion-content {
 	max-height: 300px;
 	padding: 20px;
 }
-
-
+// toggle
