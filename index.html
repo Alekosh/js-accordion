@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Document</title>
+  <!-- Подключение файлов -->
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="accordion">
+      <div class="title">
+        <h3>someting</h3>
+      </div>
+
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+      </div>
+
+    </div>
+
+    <div class="accordion">
+      <div class="title">
+        <h3>someting</h3>
+      </div>
+
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+      </div>
+
+    </div>
+
+    <div class="accordion">
+      <div class="title">
+        <h3>someting</h3>
+      </div>
+
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus veniam, doloribus, provident inventore
+          corrupti et ea ullam optio, consequuntur est omnis nostrum eaque perspiciatis molestias sit consectetur dolor
+          natus neque.</p>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- <script src="./js/main.js"></script> -->
+  <script>
+    let accordion = document.querySelectorAll('.accordion');
+
+    accordion.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+
+
+
+        if (item.style.height) {
+          item.style.maxHeight = null;
+        } else {
+          item.style.maxHeight = item.scrollHeight + "px";
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
